@@ -14,7 +14,7 @@ class NumberOfIslandsTest {
                 {'1', '1', '0', '0', '0'},
                 {'0', '0', '0', '0', '0'}
         };
-        Assertions.assertEquals(1, NumberOfIslands.numIslands(grid));
+        Assertions.assertEquals(1, NumberOfIslands.numIslandsUsingBFS(grid));
     }
 
     @Test
@@ -26,7 +26,7 @@ class NumberOfIslandsTest {
                 {'0', '0', '1', '0', '0'},
                 {'0', '0', '0', '1', '1'}
         };
-        Assertions.assertEquals(3, NumberOfIslands.numIslands(grid));
+        Assertions.assertEquals(3, NumberOfIslands.numIslandsUsingBFS(grid));
     }
 
     @Test
@@ -38,6 +38,6 @@ class NumberOfIslandsTest {
                 {'0', '0', '0', '0', '0'},
                 {'0', '0', '0', '0', '0'}
         };
-        Assertions.assertEquals(0, NumberOfIslands.numIslands(grid));
+        Assertions.assertEquals(0, NumberOfIslands.numIslandsUsingBFS(grid));
     }
 }

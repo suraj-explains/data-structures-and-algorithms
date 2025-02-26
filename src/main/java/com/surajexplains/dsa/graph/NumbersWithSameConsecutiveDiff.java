@@ -12,7 +12,7 @@ public class NumbersWithSameConsecutiveDiff {
         IntStream.range(1, 10)
                 .forEach(queue::add);
 
-        for (int i = 0; i < n - 1; i++) {
+        for (int i = 1; i < n ; i++) {
 
             int size = queue.size();
 
