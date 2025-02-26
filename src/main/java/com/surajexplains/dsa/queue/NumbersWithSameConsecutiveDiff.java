@@ -1,4 +1,4 @@
-package com.surajexplains.dsa.graph;
+package com.surajexplains.dsa.queue;
 
 import java.util.LinkedList;
 import java.util.Queue;

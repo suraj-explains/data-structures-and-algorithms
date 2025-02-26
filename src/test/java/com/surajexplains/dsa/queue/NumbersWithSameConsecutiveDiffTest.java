@@ -1,4 +1,4 @@
-package com.surajexplains.dsa.graph;
+package com.surajexplains.dsa.queue;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
