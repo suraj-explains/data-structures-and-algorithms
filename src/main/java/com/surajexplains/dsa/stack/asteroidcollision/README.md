@@ -32,3 +32,28 @@ Explanation: The 2 and -5 collide resulting in -5. The 10 and -5 collide resulti
 2 <= asteroids.length <= 104</br>
 -1000 <= asteroids[i] <= 1000</br>
 asteroids[i] != 0
+
+</br>
+
+<h3> Case 1:
+
+![img.png](img.png)
+
+</br></br></br></br><h3> Case 2:</h3>
+
+
+![img_1.png](img_1.png)
+
+</br></br></br></br></br><h3> Case 3:
+
+![img_2.png](img_2.png)
+
+</br></br></br></br><h3> Case 4: 
+
+![img_3.png](img_3.png)
+
+</br></br></br></br><h3> Case 5:
+
+![img_4.png](img_4.png)
+
+</br></br>
