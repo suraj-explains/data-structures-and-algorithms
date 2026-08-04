@@ -1,4 +1,4 @@
-package greedy.jumpgame55;
+package com.surajexplains.dsa.jumpgame55;
 
 public class JumpGame55 {
 
