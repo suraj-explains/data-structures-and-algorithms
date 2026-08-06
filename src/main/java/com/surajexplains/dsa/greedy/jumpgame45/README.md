@@ -24,44 +24,6 @@ Think of this problem like a **Breadth-First Search (BFS)**, where each jump lev
 
 ---
 
-## 🛠️ Java Implementation
-
-```java
-public class JumpGame2 {
-
-    public int jump(int[] nums) {
-        // Handle base case: array with single element requires 0 jumps
-        if (nums == null || nums.length <= 1) {
-            return 0;
-        }
-
-        int jumps = 0;
-        int currentEnd = 0;
-        int farthest = 0;
-
-        // We don't need to process the last element (nums.length - 1)
-        // because once we reach or pass it, we are already at the destination.
-        for (int i = 0; i < nums.length - 1; i++) {
-            // Track the maximum reachable index from current position
-            farthest = Math.max(farthest, i + nums[i]);
-
-            // Reached the end of the current jump level
-            if (i == currentEnd) {
-                jumps++;
-                currentEnd = farthest;
-
-                // Early exit: destination is reachable
-                if (currentEnd >= nums.length - 1) {
-                    break;
-                }
-            }
-        }
-        return jumps;
-    }
-}
-```
-
----
 
 ## 🔍 Step-by-Step Visual Execution Walkthrough
 
@@ -151,6 +113,42 @@ $$\text{nums} = [2, 3, 1, 1, 4]$$
   Final Result: jumps = 2
 ```
 
+## 🛠️ Java Implementation
+
+```java
+public class JumpGame2 {
+
+    public int jump(int[] nums) {
+        // Handle base case: array with single element requires 0 jumps
+        if (nums == null || nums.length <= 1) {
+            return 0;
+        }
+
+        int jumps = 0;
+        int currentEnd = 0;
+        int farthest = 0;
+
+        // We don't need to process the last element (nums.length - 1)
+        // because once we reach or pass it, we are already at the destination.
+        for (int i = 0; i < nums.length - 1; i++) {
+            // Track the maximum reachable index from current position
+            farthest = Math.max(farthest, i + nums[i]);
+
+            // Reached the end of the current jump level
+            if (i == currentEnd) {
+                jumps++;
+                currentEnd = farthest;
+
+                // Early exit: destination is reachable
+                if (currentEnd >= nums.length - 1) {
+                    break;
+                }
+            }
+        }
+        return jumps;
+    }
+}
+```
 ---
 
 ## 📊 Summary Execution Table
