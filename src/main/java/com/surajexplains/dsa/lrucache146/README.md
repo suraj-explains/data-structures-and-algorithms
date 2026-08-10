@@ -20,18 +20,21 @@ Think of an LRU cache like your browser's recently used tabs:
 To achieve **$O(1)$ time complexity** for lookups, insertions, and deletions, two data structures are combined:
 
 ```
-                  +-------------------------------------------------------+
-                  |                      HashMap                          |
-                  |   Key   --->   Node Pointer                           |
-                  +-------------------------------------------------------+
-                                        |
-                                        v
-                 +------+     +---+---+---+     +---+---+---+     +------+
-[ Dummy Head ] ->| prev |<--->| K | V |   |<--->| K | V |   |<--->| prev |<- [ Dummy Tail ]
- (Most Recent)   | next |     |   |   |   |     |   |   |   |     | next |   (Least Recent)
-                 +------+     +---+---+---+     +---+---+---+     +------+
-                                Most Recently     Least Recently
-                                 Used (MRU)        Used (LRU)
+
+
+                      +-------------------------------------------------------+
+                      |                      HashMap                          |
+                      |   Key   --->   Node Pointer                           |
+                      +-------------------------------------------------------+
+                                            |
+                                            v
+                    +------+-----+-----+------+     +------+-----+-----+------+     
+[ Dummy Head ] <--->| prev | Key | Val | next |<--->| prev | Key | Val | next |<---> [ Dummy Tail ]
+ (Most Recent)      +------+-----+-----+------+     +------+-----+-----+------+      (Least Recent)
+                    |  Most Recently Used     |     | Least Recently Used     |
+                    |         (MRU)           |     |         (LRU)           |
+
+
 ```
 
 1. **HashMap (`Map<Integer, Node>`)**: Provides **$O(1)$ access** to search for any key and directly retrieve its node pointer in memory.
